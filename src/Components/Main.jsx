@@ -18,7 +18,7 @@ export default function Main() {
           <div className="flex flex-wrap gap-4 mt-6 justify-center lg:justify-start">
             <button className="bg-white flex hover:cursor-pointer text-sm items-center px-6 py-2 rounded-xl hover:bg-gray-300 group transition-all duration-300 sm:text-base md:px-8">
               View Projects
-              <FaArrowRightLong className="ml-2 sm:ml-3 transition-transform duration-300 group-hover:translate-x-2" />
+              <FaArrowRightLong className="ml-2 sm:ml-3 animate-pulse transition-transform duration-300 group-hover:translate-x-2" />
             </button>
             <div className="flex gap-2">
               {[...Array(3)].map((_, index) => (
@@ -32,13 +32,13 @@ export default function Main() {
             </div>
           </div>
         </div>
-        <div className="mt-8 sm:mt-10 md:mt-12 lg:mt-0 lg:w-1/2">
-          <img
-            src={Image}
-            alt="foto jose arias"
-            className="w-full rounded-xl sm:w-2/3 md:w-1/2 mx-auto"
-          />
-        </div>
+        <div className="mt-12 lg:mt-0 lg:w-1/2 flex justify-center lg:justify-end">
+        <img
+          src={Image}
+          alt="foto jose arias"
+          className="w-4/5 sm:w-3/4 md:w-/3 lg:w-full  rounded-xl shadow-lg"
+        />
+      </div>
       </div>
     </div>
   );
