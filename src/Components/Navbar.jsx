@@ -7,11 +7,24 @@ export default function Navbar() {
   const [indicatorStyle, setIndicatorStyle] = useState({ width: 0, left: 0 });
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { t, i18n } = useTranslation();
-  
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   const linksRef = useRef([]);
-  const links = [ t('navbar.home'),t('navbar.experience'), t('navbar.projects'), t('navbar.cv'), t('navbar.contact')];
+  const links = [
+    { id: "home", label: t('navbar.home') },
+    { id: "experience", label: t('navbar.experience') },
+    { id: "projects", label: t('navbar.projects') },
+    { id: "cv", label: t('navbar.cv') },
+    { id: "contact", label: t('navbar.contact') }
+  ];
+
+
+  const handleScrollToSection = (sectionId) => {
+    const element = document.getElementById(`${sectionId}-section`); 
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   const handleMouseEnter = (index) => {
     if (linksRef.current[index]) {
@@ -26,7 +39,7 @@ export default function Navbar() {
   };
 
   const handleLanguageChange = () => {
-    const newLanguage = i18n.language === "en" ? "es" : "en"; // Cambia entre inglés y español
+    const newLanguage = i18n.language === "en" ? "es" : "en"; 
     i18n.changeLanguage(newLanguage);
   };
 
@@ -52,7 +65,7 @@ export default function Navbar() {
         <nav className="hidden lg:flex items-center gap-5">
           <div className="relative flex items-center gap-3 border-1 py-3 px-6 rounded-3xl border-white/20 backdrop-blur-sm">
             <span
-              className="absolute  h-8 bg-white/20 rounded-xl transition-all duration-300 ease-in-out backdrop-blur-md"
+              className="absolute h-8 bg-white/20 rounded-xl transition-all duration-300 ease-in-out backdrop-blur-md"
               style={{
                 width: indicatorStyle.width,
                 left: indicatorStyle.left,
@@ -63,13 +76,13 @@ export default function Navbar() {
             {links.map((link, index) => (
               <a
                 key={index}
-                href={link}
+                href={`#${link.id}`} // El href está bien
                 className="relative z-10 text-sm px-4 py-1 transition-all duration-300 hover:text-white"
                 ref={(el) => (linksRef.current[index] = el)}
                 onMouseEnter={() => handleMouseEnter(index)}
                 onMouseLeave={() => setHoverIndex(null)}
               >
-                {link}
+                {link.label} 
               </a>
             ))}
           </div>
@@ -102,10 +115,10 @@ export default function Navbar() {
               <a
                 key={index}
                 href="#"
-                className="text-xl py-4 "
-                onClick={toggleMenu}
+                className="text-xl py-4"
+                onClick={() => { toggleMenu(); handleScrollToSection(link.id) }} // Desplazarse a la sección correspondiente
               >
-                <p className="hover:text-gray-400">{link}</p>
+                <p className="hover:text-gray-400">{link.label}</p> {/* Renderiza solo el texto del enlace */}
               </a>
             ))}
             <button

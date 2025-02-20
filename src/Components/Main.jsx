@@ -7,7 +7,7 @@ import { useTranslation } from 'react-i18next';
 export default function Main() {
   const { t } = useTranslation();
   return (
-    <div className="mt-12 sm:mt-20 md:mt-28 lg:mt-32 px-4 min-h-screen flex items-center">
+    <div id="home" className="mt-12 transition sm:mt-20 md:mt-28 lg:mt-32 px-4 min-h-screen flex items-center">
       <div className="flex flex-col-reverse lg:flex-row items-center w-full max-w-6xl mx-auto">
         <div className="text-center lg:text-left lg:w-1/2">
           <h2 className="text-white text-3xl sm:text-4xl md:text-5xl font-bold">
@@ -23,18 +23,24 @@ export default function Main() {
             </button>
 
             <div className="flex gap-2">
-              <button
+              <a
                 className="relative hover:animate-pulse hover:bg-gray-900 hover:cursor-pointer transition duration-500 p-3 border-2 rounded-2xl border-white/20 backdrop-blur-sm text-white"
                 title="GitHub"
-              >
+                href="https://github.com/jooseariias"
+                target="_blank"
+                rel="noreferrer"
+                >
                 <FiGithub />
-              </button>
-              <button
+              </a>
+              <a
                 className="relative hover:animate-pulse hover:cursor-pointer hover:bg-gray-900 transition duration-500 p-3 border-2 rounded-2xl border-white/20 backdrop-blur-sm text-white"
                 title="LinkedIn"
+                href="https://www.linkedin.com/in/joosearias/"
+                target="_blank"
+                rel="noreferrer"
               >
                 <TiSocialLinkedin />
-              </button>
+              </a>
             </div>
 
           </div>
