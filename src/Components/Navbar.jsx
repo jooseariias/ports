@@ -1,5 +1,6 @@
-import { FaRegMoon, FaBars, FaSun } from "react-icons/fa";
+import { FaRegMoon, FaBars, FaSun, FaCode } from "react-icons/fa";
 import { useState, useRef } from "react";
+
 
 export default function Navbar() {
   const [hoverIndex, setHoverIndex] = useState(null);
@@ -35,8 +36,8 @@ export default function Navbar() {
   return (
     <div className="fixed top-0 mt-8 left-0 right-0 z-50 flex items-center justify-between h-20 px-4 sm:px-[7%]">
       <header className="flex text-white justify-between items-center w-full h-20">
-        <button className="px-8 py-3 rounded-3xl backdrop-blur-sm shadow-[0_0_40px_0px_rgba(255,255,255,0.1)] text-white">
-          Jose Arias
+        <button className="px-8 flex items-center gap-2.5 py-3 rounded-3xl backdrop-blur-sm shadow-[0_0_40px_0px_rgba(255,255,255,0.1)] text-white">
+        < FaCode/>  Jose Arias
         </button>
 
         <button
@@ -49,7 +50,7 @@ export default function Navbar() {
         <nav className="hidden lg:flex items-center gap-5">
           <div className="relative flex items-center gap-3 border-1 py-3 px-6 rounded-3xl border-white/20 backdrop-blur-sm">
             <span
-              className="absolute bottom-3 h-8 bg-white/20 rounded-xl transition-all duration-300 ease-in-out backdrop-blur-md"
+              className="absolute  h-8 bg-white/20 rounded-xl transition-all duration-300 ease-in-out backdrop-blur-md"
               style={{
                 width: indicatorStyle.width,
                 left: indicatorStyle.left,
