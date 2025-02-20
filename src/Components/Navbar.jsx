@@ -89,7 +89,7 @@ export default function Navbar() {
 
           <button
             onClick={handleLanguageChange}
-            className="relative px-3 text-sm py-2 border-2 rounded-2xl border-white/20 backdrop-blur-sm text-white hover:bg-gray-700 transition duration-300"
+            className="relative px-3 text-sm py-2 hover:cursor-pointer border-2 rounded-2xl border-white/20 backdrop-blur-sm text-white hover:bg-gray-700 transition duration-300"
           >
             {i18n.language === "en" ? "ES" : "EN"}
           </button>
