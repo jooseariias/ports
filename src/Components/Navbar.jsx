@@ -45,7 +45,7 @@ export default function Navbar() {
 
   const toggleDarkMode = () => {
     setIsDarkMode(!isDarkMode);
-    document.body.classList.toggle("dark", !isDarkMode);
+   
   };
 
   return (
@@ -76,7 +76,7 @@ export default function Navbar() {
             {links.map((link, index) => (
               <a
                 key={index}
-                href={`#${link.id}`} // El href está bien
+                href={`#${link.id}`} 
                 className="relative z-10 text-sm px-4 py-1 transition-all duration-300 hover:text-white"
                 ref={(el) => (linksRef.current[index] = el)}
                 onMouseEnter={() => handleMouseEnter(index)}
