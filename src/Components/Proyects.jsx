@@ -2,10 +2,10 @@ import projects from "../utils/dataProjet.json";
 import { useState } from "react";
 
 export default function Proyects() {
-  const [visibleProjects, setVisibleProjects] = useState(6);
+  const [visibleProjects, setVisibleProjects] = useState(4);
 
   const handleShowMore = () => {
-    setVisibleProjects((prev) => prev + 6);
+    setVisibleProjects((prev) => prev + 3);
   };
 
   return (
@@ -13,10 +13,10 @@ export default function Proyects() {
       <h2 className="text-white mt-10 mb-10 text-center text-5xl font-bold">
         Proyectos
       </h2>
-      <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-8 grid-cols-1">
         {projects.slice(0, visibleProjects).map((project, index) => (
           <div key={index} className="group relative text-white">
-            {/* Animación de borde */}
+  
             <svg
               className="absolute inset-0 group-hover:animate-svgAnimation pointer-events-none"
               height="100%"
@@ -34,19 +34,24 @@ export default function Proyects() {
             </svg>
 
             <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-primary/0 opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl" />
-            <div className="relative bg-card  border-transparent rounded-2xl overflow-hidden flex flex-col h-full">
-              <div className="aspect-video overflow-hidden h-56">
+            <div className="relative bg-card border-transparent rounded-2xl overflow-hidden flex flex-col md:flex-row h-auto w-full">
+              
+              <div className="relative w-full h-72 md:w-2/3">
                 <img
                   src={project.imagenes[0] || "/placeholder.svg"}
                   alt={project.titulo}
                   className="object-cover w-full h-full transition-transform group-hover:scale-105"
                 />
               </div>
-              <div className="p-6 flex flex-col flex-grow">
-                <h3 className="text-xl font-semibold mb-2">{project.titulo}</h3>
-                <p className="text-muted-foreground mb-4 flex-grow">
-                  {project.descripcion.join(", ")}
-                </p>
+
+
+              <div className="p-6 flex flex-col justify-between w-full md:w-1/3">
+                <div>
+                  <h3 className="text-xl font-semibold mb-2">{project.titulo}</h3>
+                  <p className="text-muted-foreground mb-4">
+                    {project.descripcion.join(", ")}
+                  </p>
+                </div>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.descripcion.map((tech, techIndex) => (
                     <span
