@@ -9,12 +9,8 @@ export default function Experience() {
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">{t('experience.title')}</h2>
         </div>
-
         <div className="relative">
-          {/* Timeline line */}
           <div className="absolute left-0 md:left-1/2 h-full w-px bg-gray-600" />
-
-          {/* Experience Items */}
           {[
             {
               date: t('experience.year'),
@@ -46,10 +42,10 @@ export default function Experience() {
             },
           ].map((experience, index) => (
             <div key={experience.company} className="relative grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-              {/* Timeline dot */}
+
               <div className="absolute left-[-5px] md:left-1/2 md:ml-[-5px] w-[10px] h-[10px] rounded-full bg-primary mt-2" />
 
-              {/* Content */}
+
               <div className={`md:text-right ${index % 2 === 0 ? "md:pr-12" : "md:order-2 md:pl-12"}`}>
                 <span className="inline-block px-3 py-1 bg-primary/20 text-primary rounded-full text-sm font-medium mb-2">
                   {experience.date}

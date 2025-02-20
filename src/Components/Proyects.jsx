@@ -1,12 +1,19 @@
+import { useState, useEffect } from "react";
 import projects from "../utils/dataProjet.json";
 import MovilProyect from "../utils/MovilProject.json";
-import { useState } from "react";
-import { useTranslation } from "react-i18next";
 
 export default function Proyects() {
   const [visibleProjects, setVisibleProjects] = useState(4);
   const [visibleMobileProjects, setVisibleMobileProjects] = useState(4);
-  const { t } = useTranslation();
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % projects[0].imagenes.length);
+    }, 4000); 
+
+    return () => clearInterval(interval); 
+  }, []);
 
   const handleShowMoreDesktop = () => {
     setVisibleProjects((prev) => prev + 3);
@@ -19,7 +26,7 @@ export default function Proyects() {
   return (
     <div id="projects">
       <h2 className="text-white mt-10 mb-10 text-center text-5xl font-bold">
-        {t("proyects.title")}
+        Proyectos
       </h2>
 
       <div>
@@ -47,9 +54,9 @@ export default function Proyects() {
               <div className="relative bg-card border-transparent rounded-2xl overflow-hidden flex flex-col md:flex-row h-auto w-full">
                 <div className="relative w-full h-72 md:w-2/3">
                   <img
-                    src={project.imagenes[0] || "/placeholder.svg"}
+                    src={project.imagenes[currentImageIndex] || "/placeholder.svg"}
                     alt={project.titulo}
-                    className="object-cover w-full h-full transition-transform group-hover:scale-105"
+                    className="object-cover w-full h-full transition-opacity duration-500 ease-in-out opacity-100 group-hover:scale-105"
                   />
                 </div>
 
@@ -76,7 +83,7 @@ export default function Proyects() {
                     href={project.link}
                     className="hover:scale-105 backdrop-blur-sm hover:animate-pulse hover:cursor-pointer shadow-[0_0_40px_0px_rgba(255,255,255,0.1)] text-white py-3 text-center rounded-xl transition-all duration-300 font-semibold"
                   >
-                    {t("proyects.viewProjects")}
+                    Ver Proyecto
                   </a>
                 </div>
               </div>
@@ -89,7 +96,7 @@ export default function Proyects() {
               onClick={handleShowMoreDesktop}
               className="bg-primary underline hover:cursor-pointer hover:scale-110 text-white px-6 py-3 rounded-lg transition-all duration-300 hover:bg-primary/80"
             >
-              {t("proyects.viewMore")}
+              Ver más
             </button>
           </div>
         )}
@@ -123,7 +130,7 @@ export default function Proyects() {
                     <img
                       src={project.imagenes[0] || "/placeholder.svg"}
                       alt={project.titulo}
-                      className="object-cover w-full h-full transition-transform group-hover:scale-105"
+                      className="object-cover w-full h-full transition-opacity duration-500 ease-in-out opacity-100 group-hover:scale-105"
                     />
                   </div>
 
@@ -132,7 +139,7 @@ export default function Proyects() {
                       href={project.link}
                       className="hover:scale-105 backdrop-blur-sm hover:animate-pulse hover:cursor-pointer shadow-[0_0_40px_0px_rgba(255,255,255,0.1)] text-white py-3 text-center rounded-xl transition-all duration-300 font-semibold"
                     >
-                      {t("proyects.viewProjects")}
+                      Ver Proyecto
                     </a>
                   </div>
                 </div>
@@ -146,7 +153,7 @@ export default function Proyects() {
               onClick={handleShowMoreMobile}
               className="bg-primary underline hover:cursor-pointer hover:scale-110 text-white px-6 py-3 rounded-lg transition-all duration-300 hover:bg-primary/80"
             >
-              {t("proyects.viewMore")}
+              Ver más
             </button>
           </div>
         )}

@@ -17,10 +17,10 @@ export default function Main() {
             {t('home.description')}
           </p>
           <div className="flex flex-wrap gap-4 mt-6 justify-center lg:justify-start">
-            <button className="bg-white hover:cursor-pointer  flex items-center px-6 py-2 rounded-xl hover:bg-gray-300 group transition-all duration-300 sm:text-base md:px-8">
+            <a  href="#projects" className="bg-white hover:cursor-pointer  flex items-center px-6 py-2 rounded-xl hover:bg-gray-300 group transition-all duration-300 sm:text-base md:px-8">
               {t('home.viewProjects')}
               <FaArrowRightLong className="ml-2 sm:ml-3 animate-pulse transition-transform duration-300 group-hover:translate-x-2" />
-            </button>
+            </a>
 
             <div className="flex gap-2">
               <a
