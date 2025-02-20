@@ -1,13 +1,12 @@
 import projects from "../utils/dataProjet.json";
 import { useState } from "react";
 
-
 export default function Proyects() {
-    const [visibleProjects, setVisibleProjects] = useState(6);
+  const [visibleProjects, setVisibleProjects] = useState(6);
 
-    const handleShowMore = () => {
-        setVisibleProjects((prev) => prev + 6);
-    };
+  const handleShowMore = () => {
+    setVisibleProjects((prev) => prev + 6);
+  };
 
   return (
     <div>
@@ -15,10 +14,27 @@ export default function Proyects() {
         Proyectos
       </h2>
       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-      {projects.slice(0, visibleProjects).map((project, index) => (
+        {projects.slice(0, visibleProjects).map((project, index) => (
           <div key={index} className="group relative text-white">
+            {/* Animación de borde */}
+            <svg
+              className="absolute inset-0 group-hover:animate-svgAnimation pointer-events-none"
+              height="100%"
+              width="100%"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                rx="8"
+                ry="8"
+                className="line"
+                height="100%"
+                width="100%"
+                stroke-linejoin="round"
+              />
+            </svg>
+
             <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-primary/0 opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl" />
-            <div className="relative bg-card border rounded-2xl overflow-hidden flex flex-col h-full">
+            <div className="relative bg-card  border-transparent rounded-2xl overflow-hidden flex flex-col h-full">
               <div className="aspect-video overflow-hidden h-56">
                 <img
                   src={project.imagenes[0] || "/placeholder.svg"}
@@ -43,9 +59,9 @@ export default function Proyects() {
                 </div>
                 <a
                   href={project.link}
-                  className=" hover:scale-105 backdrop-blur-sm hover:animate-pulse hover:cursor-pointer shadow-[0_0_40px_0px_rgba(255,255,255,0.1)] text-white  py-3 text-center rounded-xl transition-all duration-300  font-semibold"
+                  className="hover:scale-105 backdrop-blur-sm hover:animate-pulse hover:cursor-pointer shadow-[0_0_40px_0px_rgba(255,255,255,0.1)] text-white py-3 text-center rounded-xl transition-all duration-300 font-semibold"
                 >
-                Ver Proyecto
+                  Ver Proyecto
                 </a>
               </div>
             </div>
@@ -53,15 +69,15 @@ export default function Proyects() {
         ))}
       </div>
       {visibleProjects < projects.length && (
-                <div className="flex justify-center mt-8">
-                    <button 
-                        onClick={handleShowMore} 
-                        className="bg-primary underline hover:cursor-pointer hover:scale-110 text-white px-6 py-3 rounded-lg transition-all duration-300 hover:bg-primary/80"
-                    >
-                        Ver Más
-                    </button>
-                </div>
-            )}
+        <div className="flex justify-center mt-8">
+          <button
+            onClick={handleShowMore}
+            className="bg-primary underline hover:cursor-pointer hover:scale-110 text-white px-6 py-3 rounded-lg transition-all duration-300 hover:bg-primary/80"
+          >
+            Ver Más
+          </button>
+        </div>
+      )}
     </div>
   );
 }
