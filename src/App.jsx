@@ -1,3 +1,7 @@
+import { I18nextProvider } from 'react-i18next';
+import i18n from './Config/i18n';
+
+
 import  Navbar  from './Components/Navbar'
 import Main from './Components/Main'
 import Proyects from './Components/Proyects'
@@ -8,6 +12,7 @@ import Footer from "./Components/Footer"
 
 export default function App() {
   return (
+    <I18nextProvider i18n={i18n}>
     <div className='bg-primary'>
     <Navbar />
     <Main />
@@ -17,5 +22,6 @@ export default function App() {
     < Contact />
     <Footer />
     </div>
+    </I18nextProvider>
   )
 }

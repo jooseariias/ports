@@ -1,0 +1,65 @@
+{
+  "navbar": {
+    "home": "Home",
+    "experience": "Experience",
+    "projects": "Projects",
+    "cv": "CV",
+    "contact": "Contact"
+  },
+  "home": {
+    "title": "Full Stack Developer",
+    "description": "I specialize in creating complete and scalable solutions, both on the front-end and back-end, using modern technologies and high-performance development tools.",
+    "viewProjects": "View Projects"
+  },
+  "experience": {
+    "title": "Work Experience",
+    "year": "2023 - Present",
+    "freelance": {
+      "description": "Developed and optimized responsive user interfaces for clients, reducing load times and improving user experience.",
+      "achievement1": "Built scalable apps using React, Next.js, Angular, etc.",
+      "achievement2": "Designed secure authentication systems with JWT and Google Auth.",
+      "achievement3": "Integrated RESTful APIs with Node.js and Express.js.",
+      "achievement4": "Managed global states with Redux and Zustand.",
+      "achievement5": "Collaborated with agile teams using Scrum methodologies."
+    },
+    "noCountry": {
+      "role": "Full Stack Developer (Internship)",
+      "description": "Worked as a Full Stack Developer handling both backend (Node.js, Java) and frontend tasks, contributing to project development and team collaboration.",
+      "achievement1": "Contributed to the development of several full-stack applications.",
+      "achievement2": "Worked with Java for backend and integrated APIs with Node.js.",
+      "achievement3": "Built responsive frontend applications using modern web technologies."
+    },
+    "keyAchievements": "Key Achievements"
+  },
+  "proyects": {
+    "title": "Projects",
+    "viewProjects": "View Projects",
+    "viewMore": "View More"
+  },
+  "skills": {
+    "title": "Skills and Technologies",
+    "frontend": "Front-End Development",
+    "backend": "Back-End Development",
+    "tools": "Tools and Methods",
+    "softSkills": "Soft Skills"
+  },
+  "contact": {
+    "title": "Contact",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "sendMessage": "Send Message",
+    "successMessage": "Message sent successfully!",
+    "errorMessage": "Error sending message!",
+    "formError": "Please fill out all fields.",
+    "contactInfo": "Contact Information",
+    "socialMedia": "Social Media",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "plasholder": "Ex: John Doe",
+    "emailPlaceholder": "Ex: johndoe@gmail.com",
+    "messagePlaceholder": "Ex: Hi, how are you?",
+    "send": "Send",
+    "close": "Close"
+  }
+}

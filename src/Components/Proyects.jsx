@@ -1,10 +1,12 @@
 import projects from "../utils/dataProjet.json";
 import MovilProyect from "../utils/MovilProject.json";
 import { useState } from "react";
+import { useTranslation } from 'react-i18next';
 
 export default function Proyects() {
   const [visibleProjects, setVisibleProjects] = useState(4);
   const [visibleMobileProjects, setVisibleMobileProjects] = useState(4);
+  const { t } = useTranslation();
 
   const handleShowMoreDesktop = () => {
     setVisibleProjects((prev) => prev + 3);
@@ -17,7 +19,7 @@ export default function Proyects() {
   return (
     <div>
       <h2 className="text-white mt-10 mb-10 text-center text-5xl font-bold">
-        Proyectos
+        {t('proyects.title')}
       </h2>
 
     
@@ -73,7 +75,7 @@ export default function Proyects() {
                     href={project.link}
                     className="hover:scale-105 backdrop-blur-sm hover:animate-pulse hover:cursor-pointer shadow-[0_0_40px_0px_rgba(255,255,255,0.1)] text-white py-3 text-center rounded-xl transition-all duration-300 font-semibold"
                   >
-                    Ver Proyecto
+                    {t('proyects.viewProjects')}
                   </a>
                 </div>
               </div>
@@ -86,7 +88,7 @@ export default function Proyects() {
               onClick={handleShowMoreDesktop}
               className="bg-primary underline hover:cursor-pointer hover:scale-110 text-white px-6 py-3 rounded-lg transition-all duration-300 hover:bg-primary/80"
             >
-              Ver Más
+              {t('proyects.viewMore')}
             </button>
           </div>
         )}
@@ -129,7 +131,7 @@ export default function Proyects() {
                     href={project.link}
                     className="hover:scale-105 backdrop-blur-sm hover:animate-pulse hover:cursor-pointer shadow-[0_0_40px_0px_rgba(255,255,255,0.1)] text-white py-3 text-center rounded-xl transition-all duration-300 font-semibold"
                   >
-                    Ver Proyecto
+                    {t('proyects.viewProjects')}
                   </a>
                 </div>
               </div>
@@ -142,7 +144,7 @@ export default function Proyects() {
               onClick={handleShowMoreMobile}
               className="bg-primary underline hover:cursor-pointer hover:scale-110 text-white px-6 py-3 rounded-lg transition-all duration-300 hover:bg-primary/80"
             >
-              Ver Más
+              {t('proyects.viewMore')}
             </button>
           </div>
         )}

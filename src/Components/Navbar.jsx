@@ -1,16 +1,17 @@
 import { FaRegMoon, FaBars, FaSun, FaCode } from "react-icons/fa";
 import { useState, useRef } from "react";
-
+import { useTranslation } from 'react-i18next';
 
 export default function Navbar() {
   const [hoverIndex, setHoverIndex] = useState(null);
   const [indicatorStyle, setIndicatorStyle] = useState({ width: 0, left: 0 });
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [language, setLanguage] = useState("EN");
+  const { t, i18n } = useTranslation();
+  
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   const linksRef = useRef([]);
-  const links = ["Home", "Projects", "About", "Contact"];
+  const links = [ t('navbar.home'),t('navbar.experience'), t('navbar.projects'), t('navbar.cv'), t('navbar.contact')];
 
   const handleMouseEnter = (index) => {
     if (linksRef.current[index]) {
@@ -25,7 +26,8 @@ export default function Navbar() {
   };
 
   const handleLanguageChange = () => {
-    setLanguage(language === "EN" ? "ES" : "EN");
+    const newLanguage = i18n.language === "en" ? "es" : "en"; // Cambia entre inglés y español
+    i18n.changeLanguage(newLanguage);
   };
 
   const toggleDarkMode = () => {
@@ -37,7 +39,7 @@ export default function Navbar() {
     <div className="fixed top-0 mt-8 left-0 right-0 z-50 flex items-center justify-between h-20 px-4 sm:px-[7%]">
       <header className="flex text-white justify-between items-center w-full h-20">
         <button className="px-8 flex items-center gap-2.5 py-3 rounded-3xl backdrop-blur-sm shadow-[0_0_40px_0px_rgba(255,255,255,0.1)] text-white">
-        < FaCode/>  Jose Arias
+          <FaCode /> Jose Arias
         </button>
 
         <button
@@ -61,7 +63,7 @@ export default function Navbar() {
             {links.map((link, index) => (
               <a
                 key={index}
-                href="#"
+                href={link}
                 className="relative z-10 text-sm px-4 py-1 transition-all duration-300 hover:text-white"
                 ref={(el) => (linksRef.current[index] = el)}
                 onMouseEnter={() => handleMouseEnter(index)}
@@ -76,7 +78,7 @@ export default function Navbar() {
             onClick={handleLanguageChange}
             className="relative px-3 text-sm py-2 border-2 rounded-2xl border-white/20 backdrop-blur-sm text-white hover:bg-gray-700 transition duration-300"
           >
-            {language === "EN" ? "ES" : "EN"}
+            {i18n.language === "en" ? "ES" : "EN"}
           </button>
 
           <button
@@ -87,7 +89,6 @@ export default function Navbar() {
           </button>
         </nav>
 
-     
         <div
           className={`lg:hidden fixed top-0 right-0 w-full h-full bg-opacity-60 transition-all duration-300 ease-in-out ${isMenuOpen ? "block" : "hidden"
             }`}
@@ -111,7 +112,7 @@ export default function Navbar() {
               onClick={handleLanguageChange}
               className="relative py-2 px-8 border-2 rounded-2xl border-white/20 backdrop-blur-sm text-white hover:bg-gray-700 transition duration-300"
             >
-              {language === "EN" ? "ES" : "EN"}
+              {i18n.language === "en" ? "ES" : "EN"}
             </button>
             <button
               onClick={toggleDarkMode}

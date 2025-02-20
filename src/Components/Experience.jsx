@@ -1,14 +1,13 @@
 import { FaCheckCircle } from "react-icons/fa";
+import { useTranslation } from 'react-i18next';
 
 export default function Experience() {
+  const { t } = useTranslation();
   return (
     <section id="experience" className="py-20 px-4 text-white">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">Work Experience</h2>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            My professional journey and the companies I've had the pleasure to work with.
-          </p>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">{t('experience.title')}</h2>
         </div>
 
         <div className="relative">
@@ -18,30 +17,30 @@ export default function Experience() {
           {/* Experience Items */}
           {[
             {
-              date: "2020 - Present",
+              date: t('experience.year'),
               company: "Freelance Developer",
               role: "Front-End Developer",
               description:
-                "Developed and optimized responsive user interfaces for over 15 clients, reducing load times and improving UX.",
+                t("experience.freelance.description"),
               achievements: [
-                "Built scalable apps using React, Next.js, Angular, and Astro.",
-                "Designed secure authentication systems with JWT and Google Auth.",
-                "Integrated RESTful APIs with Node.js and Express.js.",
-                "Managed global states with Redux and Zustand.",
-                "Collaborated with agile teams using Scrum methodologies.",
+                t("experience.freelance.achievement1"),
+                t("experience.freelance.achievement2"),
+                t("experience.freelance.achievement3"),
+                t("experience.freelance.achievement4"),
+                t("experience.freelance.achievement5"),
               ],
               tech: ["React", "Next.js", "Angular", "Astro", "Tailwind CSS", "Redux", "Node.js"],
             },
             {
               date: "2023",
               company: "No Country",
-              role: "Full Stack Developer (Internship)",
+              role: t("experience.noCountry.role"),
               description:
-                "Worked as a Full Stack Developer handling both backend (Node.js, Java) and frontend tasks, contributing to project development and team collaboration.",
+                t("experience.noCountry.description"),
               achievements: [
-                "Contributed to the development of several full-stack applications.",
-                "Worked with Java for backend and integrated APIs with Node.js.",
-                "Built responsive frontend applications with modern web technologies.",
+                t("experience.noCountry.achievement1"),
+                t("experience.noCountry.achievement2"),
+                t("experience.noCountry.achievement3"),
               ],
               tech: ["Node.js", "Java", "React", "Spring Boot"],
             },
@@ -63,7 +62,7 @@ export default function Experience() {
               <div
                 className={`bg-gray-800 border border-gray-600 rounded-2xl p-6 ${index % 2 === 0 ? "md:pl-12" : "md:order-1 md:pr-12"}`}
               >
-                <h4 className="font-medium mb-3">Key Achievements</h4>
+                <h4 className="font-medium mb-3">{t('experience.keyAchievements')}</h4>
                 <ul className="space-y-2 mb-4">
                   {experience.achievements.map((achievement) => (
                     <li key={achievement} className="flex items-start">

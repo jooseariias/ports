@@ -1,44 +1,48 @@
-const skills = [
-  {
-    category: "Frontend Development",
-    skills: [
-      "React",
-      "Next.js",
-      "TypeScript",
-      "Tailwind CSS",
-      "Redux",
-      "Framer",
-    ],
-  },
-  {
-    category: "Backend Development",
-    skills: [
-      "Node.js",
-      "PostgreSQL",
-      "MongoDB",
-      "RESTful APIs",
-      "GraphQL",
-      "Express",
-    ],
-  },
-  {
-    category: "Tools & Methods",
-    skills: ["Git", "GitHub", "Docker", "CI/CD", "Jest", "Testing Library"],
-  },
-  {
-    category: "Soft Skills",
-    skills: [
-      "Problem Solving",
-      "Communication",
-      "Team Work",
-      "Adaptability",
-      "Leadership",
-      "Agile",
-    ],
-  },
-];
+import { useTranslation } from 'react-i18next';
+
 
 export default function Skill() {
+  const { t } = useTranslation();
+  const skills = [
+    {
+      category: t('skills.frontend'),
+      skills: [
+        "React",
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "Redux",
+        "Framer",
+      ],
+    },
+    {
+      category: t('skills.backend'),
+      skills: [
+        "Node.js",
+        "PostgreSQL",
+        "MongoDB",
+        "RESTful APIs",
+        "GraphQL",
+        "Express",
+      ],
+    },
+    {
+      category: t('skills.tools'),
+      skills: ["Git", "GitHub", "Docker", "CI/CD", "Jest", "Testing Library"],
+    },
+    {
+      category: t('skills.softSkills'),
+      skills: [
+        "Problem Solving",
+        "Communication",
+        "Team Work",
+        "Adaptability",
+        "Leadership",
+        "Agile",
+      ],
+    },
+  ];
+  
   return (
     <div className="bg-background">
       <section id="skills" className="py-20 px-4 relative">
@@ -46,11 +50,9 @@ export default function Skill() {
         <div className="max-w-7xl mx-auto relative">
           <div className="text-center mb-20">
             <h2 className="text-3xl text-white md:text-5xl font-bold mb-4">
-              Skills & Expertise
+              {t('skills.title')}
             </h2>
-            <p className="text-muted-foreground text-white text-lg max-w-2xl mx-auto">
-              A comprehensive overview of my technical skills and professional competencies.
-            </p>
+           
           </div>
 
           <div className="grid text-white gap-8 md:grid-cols-2 backdrop-blur-sm shadow-[0_0px_0px_0px_rgba(255,255,255,0.5)] rounded-2xl">

@@ -1,0 +1,69 @@
+{
+  "navbar": {
+    "home": "Inicio",
+    "experience": "Experiencia",
+    "projects": "Proyectos",
+    "cv": "CV",
+    "contact": "Contacto"
+  },
+  "home": {
+    "title": "Desarrollador Full Stack",
+    "description": "Me especializo en crear soluciones completas y escalables, tanto en el front-end como en el back-end, utilizando tecnologías modernas y herramientas de desarrollo de alto rendimiento",
+    "viewProjects": "Ver Proyectos"
+  },
+  "experience": {
+    "title": "Experiencia laboral",
+    "year": "2023 - Presente",
+    "freelance": {
+      "description": "Desarrollé y optimicé interfaces de usuario responsivas para clientes, reduciendo los tiempos de carga y mejorando la experiencia de usuario.",
+      "achievement1": "Creé aplicaciones escalables utilizando React, Next.js, Angular, etc",
+      "achievement2": "Diseñé sistemas de autenticación seguros con JWT y Google Auth.",
+      "achievement3": "Integré APIs RESTful con Node.js y Express.js.",
+      "achievement4": "Gestioné estados globales con Redux y Zustand.",
+      "achievement5": "Colaboré con equipos ágiles utilizando metodologías Scrum."
+    },
+    "noCountry": {
+      "role": "Desarrollador Full Stack (Pasantía)",
+      "description": "Estube como Desarrollador Full Stack manejando tareas tanto de backend (Node.js, Java) como de frontend, contribuyendo al desarrollo de proyectos y la colaboración en equipo.",
+      "achievement1": "Contribuí al desarrollo de varias aplicaciones full-stack.",
+      "achievement2": "Trabajé con Java para el backend e integré APIs con Node.js.",
+      "achievement3": "Desarrollé aplicaciones frontend responsivas utilizando tecnologías web modernas."
+    },
+    "keyAchievements": "Logros clave"
+  },
+  "proyects": {
+    "title": "Proyectos",
+    "viewProjects": "Ver Proyectos",
+    "viewMore": "Ver más"
+  },
+  
+    "skills": {
+      "title": "Habilidades y Tecnologías",
+      "frontend": "Desarrollo Front-End",
+      "backend": "Desarrollo Back-End",
+      "tools": "Herramientas y Métodos",
+      "softSkills": "Habilidades Blandas"
+    },
+
+    "contact": {
+      "title": "Contacto",
+      "name": "Nombre",
+      "email": "Email",
+      "message": "Mensaje",
+      "sendMessage": "Enviar Mensaje",
+      "successMessage": "¡Mensaje enviado con éxito!",
+      "errorMessage": "¡Error al enviar el mensaje!",
+      "formError": "Por favor, rellene todos los campos.",
+      "contactInfo": "Información de contacto",
+      "socialMedia": "Redes sociales",
+      "linkedin": "LinkedIn",
+      "github": "GitHub",
+      "plasholder": "Ejm:John Doe",
+      "emailPlaceholder": "Ejm: johndoe@gmail.com",
+      "messagePlaceholder": " Ejm: Hola, ¿cómo estás?",
+      "send": "Enviar",
+      "close": "Cerrar"
+
+
+    }
+}
