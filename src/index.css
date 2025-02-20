@@ -1,11 +1,17 @@
-
-
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
 
 body {
-  background-color: #09090b;
-  padding:0 10% ;
+  background-color: #cfcece; 
+  padding: 0 10%;
 }
+
+
+html.dark body {
+  background-color: #09090b; 
+}
+
 
 ::-webkit-scrollbar {
   width: 8px;
