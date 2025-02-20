@@ -1,6 +1,7 @@
 import { FaRegMoon, FaBars, FaSun, FaCode } from "react-icons/fa";
 import { useState, useRef, useEffect } from "react";
 import { useTranslation } from 'react-i18next';
+import CV from "../utils/cv-josearias-front-end.pdf";
 
 export default function Navbar() {
   const [hoverIndex, setHoverIndex] = useState(null);
@@ -14,7 +15,7 @@ export default function Navbar() {
     { id: "home", label: t('navbar.home') },
     { id: "experience", label: t('navbar.experience') },
     { id: "projects", label: t('navbar.projects') },
-    { id: "cv", label: t('navbar.cv') },
+    { id: "cv", label: t('navbar.cv'), href: CV, download: "cv-josearias-front-end.pdf" },
     { id: "contact", label: t('navbar.contact') }
   ];
 
@@ -89,18 +90,20 @@ export default function Navbar() {
               }}
             ></span>
 
-            {links.map((link, index) => (
-              <a
-                key={index}
-                href={`#${link.id}`} 
-                className="relative z-10 text-sm px-4 py-1 transition-all duration-300  dark:text-white dark:hover:text-white hover:text-black"
-                ref={(el) => (linksRef.current[index] = el)}
-                onMouseEnter={() => handleMouseEnter(index)}
-                onMouseLeave={() => setHoverIndex(null)}
-              >
-                {link.label}
-              </a>
-            ))}
+{links.map((link, index) => (
+  <a
+    key={index}
+    href={link.href ? link.href : `#${link.id}`}
+    {...(link.download ? { download: link.download } : {})}
+    className="relative z-10 text-sm px-4 py-1 transition-all duration-300 dark:text-white dark:hover:text-white hover:text-black"
+    ref={(el) => (linksRef.current[index] = el)}
+    onMouseEnter={() => handleMouseEnter(index)}
+    onMouseLeave={() => setHoverIndex(null)}
+  >
+    {link.label}
+  </a>
+))}
+
           </div>
 
           <button
