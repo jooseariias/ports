@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 export default function Experience() {
   const { t } = useTranslation();
   return (
-    <section id="experience" className="py-20 px-4 text-white">
+    <section id="experience" className="py-20 px-4 dark:text-white">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">{t('experience.title')}</h2>
@@ -52,11 +52,11 @@ export default function Experience() {
                 </span>
                 <h3 className="text-xl font-semibold">{experience.company}</h3>
                 <p className="text-primary font-medium mb-2">{experience.role}</p>
-                <p className="text-gray-400 mb-4">{experience.description}</p>
+                <p className="dark:text-gray-400 text-black/60 mb-4">{experience.description}</p>
               </div>
 
               <div
-                className={`bg-gray-800 border border-gray-600 rounded-2xl p-6 ${index % 2 === 0 ? "md:pl-12" : "md:order-1 md:pr-12"}`}
+                className={`dark:bg-gray-800 bg-gray-400 border border-gray-600 rounded-2xl p-6 ${index % 2 === 0 ? "md:pl-12" : "md:order-1 md:pr-12"}`}
               >
                 <h4 className="font-medium mb-3">{t('experience.keyAchievements')}</h4>
                 <ul className="space-y-2 mb-4">

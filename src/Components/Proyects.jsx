@@ -25,17 +25,17 @@ export default function Proyects() {
 
   return (
     <div id="projects">
-      <h2 className="text-white mt-10 mb-10 text-center text-5xl font-bold">
+      <h2 className="dark:text-white text-black mt-10 mb-10 text-center text-5xl font-bold">
         Proyectos
       </h2>
 
       <div>
-        <h3 className="text-white mt-10 mb-5 text-3xl font-bold">Web</h3>
+        <h3 className="dark:text-white  mt-10 mb-5 text-3xl font-bold">Web</h3>
         <div className="grid gap-8 grid-cols-1">
           {projects.slice(0, visibleProjects).map((project, index) => (
-            <div key={index} className="group relative text-white">
+            <div key={index} className="group relative  dark:text-white">
               <svg
-                className="absolute inset-0 group-hover:animate-svgAnimation pointer-events-none"
+                className="absolute inset-0  group-hover:animate-svgAnimation pointer-events-none"
                 height="100%"
                 width="100%"
                 xmlns="http://www.w3.org/2000/svg"
@@ -47,6 +47,7 @@ export default function Proyects() {
                   height="100%"
                   width="100%"
                   stroke-linejoin="round"
+                  stroke="black"
                 />
               </svg>
 
@@ -73,7 +74,7 @@ export default function Proyects() {
                     {project.descripcion.map((tech, techIndex) => (
                       <span
                         key={techIndex}
-                        className="px-3 py-1 bg-primary/10 text-primary bg-gray-900 rounded-full text-sm"
+                        className="px-3 py-1 bg-primary/10 text-primary text-white bg-gray-900 rounded-full text-sm"
                       >
                         {tech}
                       </span>
@@ -81,7 +82,7 @@ export default function Proyects() {
                   </div>
                   <a
                     href={project.link}
-                    className="hover:scale-105 backdrop-blur-sm hover:animate-pulse hover:cursor-pointer shadow-[0_0_40px_0px_rgba(255,255,255,0.1)] text-white py-3 text-center rounded-xl transition-all duration-300 font-semibold"
+                    className="hover:scale-105 backdrop-blur-sm bg-black hover:animate-pulse hover:cursor-pointer shadow-[0_0_40px_0px_rgba(255,255,255,0.1)] text-white py-3 text-center rounded-xl transition-all duration-300 font-semibold"
                   >
                     Ver Proyecto
                   </a>
@@ -135,12 +136,12 @@ export default function Proyects() {
                   </div>
 
                   <div className="p-6 flex flex-col justify-between w-full md:w-1/3">
-                    <a
-                      href={project.link}
-                      className="hover:scale-105 backdrop-blur-sm hover:animate-pulse hover:cursor-pointer shadow-[0_0_40px_0px_rgba(255,255,255,0.1)] text-white py-3 text-center rounded-xl transition-all duration-300 font-semibold"
-                    >
-                      Ver Proyecto
-                    </a>
+                  <a
+                    href={project.link}
+                    className="hover:scale-105 backdrop-blur-sm bg-black hover:animate-pulse hover:cursor-pointer shadow-[0_0_40px_0px_rgba(255,255,255,0.1)] text-white py-3 text-center rounded-xl transition-all duration-300 font-semibold"
+                  >
+                    Ver Proyecto
+                  </a>
                   </div>
                 </div>
               </div>

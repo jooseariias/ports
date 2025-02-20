@@ -49,17 +49,17 @@ export default function Skill() {
         <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background" />
         <div className="max-w-7xl mx-auto relative">
           <div className="text-center mb-20">
-            <h2 className="text-3xl text-white md:text-5xl font-bold mb-4">
+            <h2 className="text-3xl text-black dark:text-white md:text-5xl font-bold mb-4">
               {t('skills.title')}
             </h2>
            
           </div>
 
-          <div className="grid text-white gap-8 md:grid-cols-2 backdrop-blur-sm shadow-[0_0px_0px_0px_rgba(255,255,255,0.5)] rounded-2xl">
+          <div className="grid dark:text-white  text-black gap-8 md:grid-cols-2 backdrop-blur-sm shadow-[0_0px_0px_0px_rgba(255,255,255,0.5)] rounded-2xl">
             {skills.map((category) => (
               <div
                 key={category.category}
-                className="relative group overflow-hidden rounded-2xl border border-white/30"
+                className="relative dark:bg-black/10  bg-gray-400  group overflow-hidden rounded-2xl border border-white/30"
               >
                 {/* SVG de la animación */}
                 <svg
@@ -75,6 +75,7 @@ export default function Skill() {
                     height="100%"
                     width="100%"
                     stroke-linejoin="round"
+
                   />
                 </svg>
 

@@ -73,7 +73,7 @@ export default function Navbar() {
 
         <button
           onClick={toggleMenu}
-          className="block lg:hidden dark:text-white text-black border-[1px] mr-2 border-white/20 p-2 rounded-lg hover:cursor-pointer text-2xl"
+          className="block lg:hidden border-black dark:text-white text-black border-[1px] mr-2 dark:border-white/20 p-2 rounded-lg hover:cursor-pointer text-2xl"
         >
           <FaBars />
         </button>
@@ -105,14 +105,14 @@ export default function Navbar() {
 
           <button
             onClick={handleLanguageChange}
-            className="relative px-3 text-sm py-2 hover:cursor-pointer border-2 rounded-2xl dark:border-white/20 backdrop-blur-sm dark:text-white dark:hover:bg-gray-700 transition duration-300"
+            className="relative px-3 text-sm py-2  hover:cursor-pointer dark:border-2 border-[1px] rounded-2xl dark:border-white/20 backdrop-blur-sm dark:text-white hover:bg-gray-300 dark:hover:bg-gray-700 transition duration-300"
           >
             {i18n.language === "en" ? "ES" : "EN"}
           </button>
 
           <button
             onClick={toggleDarkMode}
-            className="relative dark:hover:bg-gray-400 transition duration-500 hover:cursor-pointer p-3 border-2 rounded-2xl border-black dark:border-white/20 backdrop-blur-sm dark:text-white dark:hover:text-white"
+            className="relative dark:hover:bg-gray-400 transition duration-500 hover:cursor-pointer p-3 dark:border-2 border-[1px] rounded-2xl hover:bg-gray-300 border-black dark:border-white/20 backdrop-blur-sm dark:text-white dark:hover:text-white"
           >
             {isDarkMode ? <FaSun /> : <FaRegMoon />}
           </button>
@@ -134,12 +134,12 @@ export default function Navbar() {
                 className="text-xl py-4"
                 onClick={() => { toggleMenu(); handleScrollToSection(link.id) }}
               >
-                <p className="hover:text-gray-400">{link.label}</p>
+                <p className="hover:text-gray-400 text-white">{link.label}</p>
               </a>
             ))}
             <button
               onClick={handleLanguageChange}
-              className="relative py-2 px-8 border-2 rounded-2xl border-white/20 backdrop-blur-sm text-white hover:bg-gray-700 transition duration-300"
+              className="relative py-2 px-8 dark:border-2 border-[1px] rounded-2xl border-white/20 backdrop-blur-sm text-white hover:bg-gray-700 transition duration-300"
             >
               {i18n.language === "en" ? "ES" : "EN"}
             </button>

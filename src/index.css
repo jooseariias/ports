@@ -3,7 +3,7 @@
 
 
 body {
-  background-color: #cfcece; 
+  background-color: #bdbdbd; 
   padding: 0 10%;
 }
 
@@ -29,3 +29,5 @@ html.dark body {
 ::-webkit-scrollbar-thumb:hover {
   background: #000000;
 }
+
+

@@ -1,0 +1,17 @@
+<svg
+  className="absolute inset-0 group-hover:animate-svgAnimation pointer-events-none"
+  height="100%"
+  width="100%"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <rect
+    rx="8"
+    ry="8"
+    className="line"
+    height="100%"
+    width="100%"
+    stroke-linejoin="round"
+    stroke="black dark:stroke-white"
+    strokeWidth="2"
+  />
+</svg>
