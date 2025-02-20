@@ -2,25 +2,21 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&display=swap"
-      rel="stylesheet"
-    />
-    <meta name="description" content="Jose Arias Portfolio Website" />
-    <meta
-      name="keywords"
-      content="Jose Arias, Portfolio, Web, Front-End, Back-End"
-    />
-    <meta name="author" content="Jose Arias" />
-    <meta name="robots" content="index, follow" />
     <link rel="icon" type="image/svg+xml" href="./src/assets/programador.png" />
-    <title>P-Jose Arias</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title id="dynamicTitle">FullStack || JoseArias </title>
+    <script>
+      setInterval(function() {
+        var title = document.getElementById('dynamicTitle').innerHTML;
+        var firstChar = title.charAt(0);
+        var restOfTitle = title.substring(1);
+        document.title = restOfTitle + firstChar;
+        document.getElementById('dynamicTitle').innerHTML = restOfTitle + firstChar;
+      }, 500);
+    </script>
   </head>
-  <body>
+  <body style="background: linear-gradient(330deg, #3d5693 0, #1f3259 50%, #061025 100%);
+">
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>

@@ -1,33 +1,8 @@
-@import "tailwindcss";
-@custom-variant dark (&:where(.dark, .dark *));
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
+/*css de los slidew */
 
-body {
-  background-color: #bdbdbd; 
-  padding: 0 10%;
-}
-
-
-html.dark body {
-  background-color: #09090b; 
-}
-
-
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: #f8f8f8;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #2c2c2c;
-  border-radius: 8px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #000000;
-}
 
 

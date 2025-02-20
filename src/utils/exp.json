@@ -1,0 +1,17 @@
+[
+  {
+    "img": "https://media.licdn.com/dms/image/C4D0BAQHJ8T4EUDhVTQ/company-logo_200_200/0/1657893488557/nocountryforjuniordevs_logo?e=1720656000&v=beta&t=3PKpWwX5QKJ_l0yjhJmnp8fofJCaQG3P8fs9v-S_POU",
+    "title": "Dec Font-End",
+    "company": "NoCountry",
+    "date": "Front-End Freelance Abril 2023 - Actualmente",
+    "description": "Front-End Desarrolador de aplicaciones SPA con react y Next.js - Front-End Desarrolador de web con Javascript Vanilla "
+  },
+
+  {
+    "img": "https://media.licdn.com/dms/image/C4D0BAQG6fJDrblcY9A/company-logo_200_200/0/1656698101589/henryok_logo?e=1720656000&v=beta&t=quDJwLWdPI3HPjhbJZyTHuugsU6TCjl8Ow0JsvrG3O0",
+    "title": "Programador Full Stack",
+    "company": "Henry",
+    "date": "enero de 2022 - abril de 2023 (1 año 4 meses)",
+    "description": "He Trabajado en Proyectos que abarcan desde el diseño de interfaces hasta el desarrollo de soluciones , ejp, diagramado de db ,diseños resposivo figma ,deploy del proyecto etc."
+  }
+]

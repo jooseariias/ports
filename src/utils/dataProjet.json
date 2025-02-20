@@ -2,7 +2,7 @@
   {
     "titulo": "💲E-NUMBRES",
     "enlace": "https://enumbersusa.com/",
-    "descripcion": ["React", "Express", "MongoDb", "Tailwind CSS", "Cloudflare", "etc."],
+    "descripcion": "React, Express, MongoDb, Tailwind CSS, Cloudflare,etc.",
     "imagenes": [
       "https://res.cloudinary.com/dmxriftxk/image/upload/v1732492541/web1_yenirv.png",
       "https://res.cloudinary.com/dmxriftxk/image/upload/v1732492593/28_3x_shots_so_oehoet.png",
@@ -12,7 +12,7 @@
   {
     "titulo": "🎮 JDtorneos",
     "enlace": "https://www.jdtorneos.online/",
-    "descripcion": ["React", "Express", "SQL", "Google Cloud", "Tailwind CSS", "etc."],
+    "descripcion": "React, Express, SQL, Google Cloud, Tailwind CSS, etc.",
     "imagenes": [
       "https://res.cloudinary.com/dmxriftxk/image/upload/v1732494677/portafolio/967shots_so_uts53i.png",
       "https://res.cloudinary.com/dmxriftxk/image/upload/v1732494677/portafolio/755shots_so_umzpul.png",
@@ -22,7 +22,7 @@
   {
     "titulo": "📦 StockWise",
     "enlace": "https://stockwise-client.vercel.app/login",
-    "descripcion": ["React", "SSAS", "Java", "Spring Boot", "SQL", "Google Cloud", "etc."],
+    "descripcion": "React, Ssas, Java, Spring Boot, SQL, Google Cloud, etc.",
     "imagenes": [
       "https://res.cloudinary.com/dmxriftxk/image/upload/v1732494999/portafolio/848shots_so_i00ait.png",
       "https://res.cloudinary.com/dmxriftxk/image/upload/v1732494999/portafolio/449shots_so_ftins1.png",
@@ -32,7 +32,7 @@
   {
     "titulo": "🎮 MundoGamer",
     "enlace": "https://mundogamers.netlify.app/",
-    "descripcion": ["React", "Tailwind CSS", "Express", "Node", "SQL", "etc."],
+    "descripcion": "React, Tailwind CSS, Express, Node, SQL, etc.",
     "imagenes": [
       "https://res.cloudinary.com/dmxriftxk/image/upload/v1732495246/portafolio/387shots_so_roaryj.png",
       "https://res.cloudinary.com/dmxriftxk/image/upload/v1732495247/portafolio/463shots_so_dw1qts.png",
@@ -42,7 +42,7 @@
   {
     "titulo": "🎧 SoundWave",
     "enlace": "https://s9-15-ft-node-next-client-20njoofpk-juanquiroz.vercel.app/",
-    "descripcion": ["TypeScript", "Next.js", "Tailwind CSS", "Node.js", "Nest", "MongoDB", "etc."],
+    "descripcion": "TypeScript, Next.js, Tailwind CSS, Node.js, Nest, MongoDB, etc.",
     "imagenes": [
       "https://res.cloudinary.com/dmxriftxk/image/upload/v1691443772/Imagen_de_WhatsApp_2023-08-07_a_las_18.28.08_uiecig.jpg",
       "https://res.cloudinary.com/dl0betelp/image/upload/v1713222519/Captura3_odd97v.png",
@@ -52,7 +52,7 @@
   {
     "titulo": "👔 AWERICANA",
     "enlace": "https://awericana.vercel.app/",
-    "descripcion": ["Next.js", "Tailwind CSS", "Node.js", "Express.js", "PostgreSQL", "etc."],
+    "descripcion": "Next.js, Tailwind CSS, Node.js, Express.js, PostgreSQL, etc.",
     "imagenes": [
       "https://res.cloudinary.com/dl0betelp/image/upload/v1713222973/screencapture-awericana-vercel-app-2024-04-15-20_14_42_bvdbkd.png",
       "https://res.cloudinary.com/dl0betelp/image/upload/v1713222971/screencapture-awericana-vercel-app-auth-signin-2024-04-15-20_15_03_krylnz.png",
@@ -62,7 +62,7 @@
   {
     "titulo": "📱 Phonezone",
     "enlace": "https://front-phone-zone.vercel.app/",
-    "descripcion": ["React", "Tailwind CSS", "Redux", "Node.js", "Express.js", "PostgreSQL", "etc."],
+    "descripcion": "React, Tailwind CSS, Redux, Node.js, Express.js, PostgreSQL, etc.",
     "imagenes": [
       "https://res.cloudinary.com/dl0betelp/image/upload/v1713223213/screencapture-front-phone-zone-vercel-app-Cart-2024-04-15-20_19_19_lrlatd.png",
       "https://res.cloudinary.com/dl0betelp/image/upload/v1713223216/screencapture-front-phone-zone-vercel-app-2024-04-15-20_18_50_hytwth.png"
